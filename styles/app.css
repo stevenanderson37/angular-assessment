@@ -9,6 +9,15 @@
 
 }
 
+.animate-show-hide.ng-hide {
+  opacity: 0;
+}
+
+.animate-show-hide.ng-hide-add,
+.animate-show-hide.ng-hide-remove {
+  transition: all linear 0.5s;
+}
+
 .jumbotron h1 {
     color: #fff;
 }
