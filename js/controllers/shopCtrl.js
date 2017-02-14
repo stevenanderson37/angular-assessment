@@ -1,9 +1,9 @@
 angular.module('assessment')
-.controller('shopCtrl', function($scope, mainService) {
+.controller('shopCtrl', function($scope, mainService, $stateParams) {
 
   $scope.getProducts = function() {
     mainService.getProducts().then(function(response) {
-      // console.log(response.data);
+      // console.log($stateParams.id);
       $scope.products = response.data;
     })
   }

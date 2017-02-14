@@ -9,6 +9,13 @@ angular.module("assessment").service("mainService", function($http) {
 		});
   };
 
+  this.getProduct = function(productid) {
+    return $http({
+      method: 'GET',
+      url: address + "/" + productid
+    });
+  };
+
 
 
 });

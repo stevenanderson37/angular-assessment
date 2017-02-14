@@ -1,17 +1,25 @@
         <!--Product Image-->
         <!--Product Image click collapse the image-->
-        <a class="product-grid__product" >
-            <img src={{product.image}} class="product-grid__img"   sizes="(min-width: 960px) 33vw, (min-width: 769px) 50vw, 100vw" alt="" />
-        </a>
-        <a class="product-grid__product">
-            show image
-        </a>
+        <div id={{product.id}} class="imagecntr">
+          <a class="product-grid__product cursor image{{product.id}}" >
+              <img src={{product.image}} class="product-grid__img"   sizes="(min-width: 960px) 33vw, (min-width: 769px) 50vw, 100vw" alt="" />
+          </a>
+          <a class="product-grid__product cursor showimage{{product.id}}" style="display: none;">
+              show image
+          </a>
+          <!-- <a class="product-grid__product cursor" ng-show="!showImg" ng-click="showImg = true">
+              <img src={{product.image}} class="product-grid__img"   sizes="(min-width: 960px) 33vw, (min-width: 769px) 50vw, 100vw" alt="" />
+          </a>
+          <a class="product-grid__product cursor" ng-show="showImg" ng-click="showImg = true">
+              show image
+          </a> -->
+        </div>
 
         <!--Product Meta-->
         <div class="product-grid__meta">
             <!--Title click Should redirect to the product-details section. remember to pass along the product id so you can make an api call
         to get the specific product details-->
-            <h3 class="product-grid__name"><a><!--Title-->{{product.title}}</a></h3>
+            <h3 ui-sref="details({id:'{{product.id}}'})" class="product-grid__name cursor"><a><!--Title-->{{product.title}}</a></h3>
 
             <!--Product Description-->
             <h4 class="product-grid__sub"><!--Desc-->{{product.desc}}</h4>

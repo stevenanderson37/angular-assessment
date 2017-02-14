@@ -15,25 +15,22 @@ angular.module("assessment")
       .state('home', {
         url: '/home',
         templateUrl: "../views/home.html"
-        // controller: "homeCtrl"
       })
 
       .state('about', {
         url: '/about',
         templateUrl: "../views/about.html"
-        // controller: "aboutCtrl"
       })
 
       .state('blog', {
         url: '/blog',
         templateUrl: "../views/blog.html"
-        // controller: "blogCtrl"
       })
 
       .state('details', {
         url: '/detail/:id',
-        templateUrl: "../views/product-details.html"
-        // controller: "detailsCtrl"
+        templateUrl: "../views/product-details.html",
+        controller: "detailsCtrl"
       })
 
       .state('shop', {
